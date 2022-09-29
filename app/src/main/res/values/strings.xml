@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Love Day</string>
+    <string name="together_for">Together for</string>
+    <string name="days">Days</string>
+    <string name="girlfriend_name">girlfriend</string>
+    <string name="boyfriend_name">boyfriend</string>
+    <string name="love_counter">Love Counter</string>
+    <string name="enter_name_boyfriend">Enter name boyfriend</string>
+    <string name="enter_age_friend">Enter age boyfriend</string>
+    <string name="enter_name_girlfriend">Enter name girlfriend</string>
+    <string name="save">Save</string>
+    <string name="enter_age_girlfriend">Enter age girlfriend</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="date">Date</string>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.loveday.viewmodel.SetupViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".views.SetupActivity">
+
+        <EditText
+            android:id="@+id/edt_name_boy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_edt"
+            android:drawableEnd="@drawable/ic_male"
+            android:hint="@string/enter_name_boyfriend"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:text="@={model.inputBoyName}"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_age_boy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_name_boy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_edt"
+            android:hint="@string/enter_age_friend"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:text="@={model.inputBoyAge}"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_name_girl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_age_boy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_edt"
+            android:drawableEnd="@drawable/ic_female"
+            android:hint="@string/enter_name_girlfriend"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:text="@={model.inputGirlName}"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_age_girl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_name_girl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_edt"
+            android:hint="@string/enter_age_girlfriend"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:paddingStart="20dp"
+            android:text="@={model.inputGirlAge}"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_age_girl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/edt_date"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edt"
+                android:gravity="center"
+                android:hint="@string/date"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:text="@={model.inputDay}"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edt_month"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_toLeftOf="@+id/edt_year"
+                android:layout_toRightOf="@id/edt_date"
+                android:background="@drawable/bg_edt"
+                android:gravity="center"
+                android:hint="@string/month"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:text="@={model.inputMonth}" />
+
+            <EditText
+                android:id="@+id/edt_year"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_edt"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:gravity="center"
+                android:hint="@string/year"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:paddingEnd="10dp"
+                android:text="@={model.inputYear}" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_btn"
+            android:text="@string/save"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</layout>
